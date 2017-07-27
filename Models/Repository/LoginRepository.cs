@@ -14,7 +14,7 @@ namespace RainVisitor.Repository
         public static DataTable Check()
         {
             string ProviderName = "MySql.Data.MySqlClient";
-            string connStr = "Server=192.168.100.21;Database=door_system;UID=haoyi8409;Password=wu011205";
+            string connStr = "Server=core.icp-si.com:33006;Database=door_system;UID=haoyi8409;Password=wu011205";
             string sql = "SELECT * FROM user";
             DbProviderFactory dbFactory = DbProviderFactories.GetFactory(ProviderName);
             DbDataAdapter adapter = dbFactory.CreateDataAdapter();
