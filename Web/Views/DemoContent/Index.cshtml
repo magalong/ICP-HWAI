@@ -1,0 +1,58 @@
+﻿@model List<YC.Models.Station>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var UserName = ViewBag.UserName;
+    var Stations = Model;//ViewBag.Stations;
+    
+
+    //this.Model
+}
+<div class="list-group">
+    <a href="#" class="list-group-item active">
+        Stations
+    </a>
+    @for (int i = 0; i < Model.Count; i++)
+    {
+
+            <a class="list-group-item">
+                <h4 class="list-group-item-heading">@Model[i].ObservatoryName</h4>
+                <p class="list-group-item-text">@Model[i].LocationAddress</p>
+            </a>
+
+    }
+    
+
+
+</div>
+
+
+@*<table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ObservatoryName</th>
+                <th>LocationAddress</th>
+                <th>LocationByTWD67</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; i++)
+                {
+            <tr>
+                <td>@Model[i].ObservatoryName</td>
+                <td>@Model[i].LocationAddress</td>
+                <td>@Model[i].LocationByTWD67</td>
+            </tr>
+
+            }
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"> 共(@Model.Count)筆資料</td>
+            </tr>
+        </tfoot>
+
+
+    </table>*@
+

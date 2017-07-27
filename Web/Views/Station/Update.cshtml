@@ -1,0 +1,72 @@
+﻿@model YC.Models.Station
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+<form action="/Station/Update" method="post">
+    <div class="form-horizontal">
+        <h4>Station</h4>
+        <hr />
+        <input id="ID" name="ID" type="hidden" 
+               value="@Model.ID">
+        <div class="form-group">
+            <label class="control-label col-md-2" for="LocationAddress">LocationAddress</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="LocationAddress" name="LocationAddress" type="text" 
+                       value="@Model.LocationAddress">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="ObservatoryName">ObservatoryName</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="ObservatoryName" name="ObservatoryName" type="text" 
+                       value="@Model.ObservatoryName">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="LocationByTWD67">LocationByTWD67</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="LocationByTWD67" name="LocationByTWD67" type="text" 
+                       value="@Model.LocationByTWD67">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="CreateTime">CreateTime</label>
+            <div class="col-md-10">
+                <input disabled class="form-control text-box single-line" id="CreateTime" name="CreateTime" type="text" 
+                       value="@Model.CreateTime">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="LastRecordTime">LastRecordTime</label>
+            <div class="col-md-10">
+                <input disabled class="form-control text-box single-line" id="LastRecordTime" name="LastRecordTime" type="text" 
+                       value="@Model.LastRecordTime">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="LastRecordWaterLevel">LastRecordWaterLevel</label>
+            <div class="col-md-10">
+                <input disabled class="form-control text-box single-line" id="LastRecordWaterLevel" name="LastRecordWaterLevel" 
+                       type="number" value="@Model.LastRecordWaterLevel">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
